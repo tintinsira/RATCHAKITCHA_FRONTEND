@@ -1,12 +1,3 @@
 {
-  "private": true,
-  "workspaces": [
-    "e-service-ratchakitcha",
-    "e-service-ratchakitcha-admin"
-  ],
-  "scripts": {
-    "build:service": "cd e-service-ratchakitcha && yarn build",
-    "build:admin": "cd e-service-ratchakitcha-admin && yarn build",
-    "build": "yarn build:service && yarn build:admin"
-  }
+  "private": true
 }

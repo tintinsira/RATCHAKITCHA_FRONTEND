@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-kanit: "Kanit", sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-kanit);
+}
+ 
+[data-title]:hover:after {
+  opacity: 1;
+  transition: all 0.1s ease 0.5s;
+  visibility: visible;
+}
+
+[data-title]:after {
+  content: attr(data-title);
+  background-color: rgba(34, 34, 34, 0.8);
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 400;
+  position: absolute;
+  padding: 6px 10px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  z-index: 99999;
+  visibility: hidden;
+  max-width: calc(100vw - 20px);
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+[data-title]:hover:after {
+  left: clamp(10px, 50%, calc(100% - 10px));
+}
+
+[data-title] {
+  position: relative;
+}

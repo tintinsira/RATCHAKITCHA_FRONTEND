@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "workspaces": ["e-service-ratchakitcha", "e-service-ratchakitcha-admin"],
+  "scripts": {
+    "dev:service": "yarn workspace e-service-ratchakitcha dev",
+    "dev:admin": "yarn workspace e-service-ratchakitcha-admin dev",
+    "build": "yarn workspaces run build",
+    "lint": "yarn workspaces run lint"
+  }
+}

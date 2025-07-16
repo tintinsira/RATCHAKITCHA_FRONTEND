@@ -9,9 +9,9 @@ import { PiFileMagnifyingGlassFill } from 'react-icons/pi';
 import InputSelectFormTitle from '@/components/input/InputSelectFormTitle';
 import DatepickerInput from '@/components/input/DatepickerInput';
 
-function Home() {
+function ListFormMember() {
   const router = useRouter();
-  
+
   const [isShowFilter, setIsShowFilter] = useState(false);
 
   return (
@@ -193,7 +193,9 @@ function Home() {
                        hover:text-[#E6E9F5] flex p-2 rounded-md my-2 mx-auto cursor-pointer
                        border borer-[#543FBF] hover:border-none
                         "
-                        onClick={(e) => { router.push('/member/viewdetailmember'); }}
+                        onClick={(e) => {
+                          router.push('/member/viewdetailmember');
+                        }}
                         data-title="ตรวจสอบ"
                       >
                         <span className="my-auto">
@@ -208,7 +210,7 @@ function Home() {
                 </tr>
                 <tr className="bg-[#efece3] shadow-md gap-4">
                   <th className="px-1 py-2 font-normal text-center rounded-s-xl w-[5%]">
-                   2
+                    2
                   </th>
                   <th className="px-1 py-2 font-normal w-[25%]">
                     <label className="flex justify-start">
@@ -241,7 +243,9 @@ function Home() {
                        hover:text-[#E6E9F5] flex p-2 rounded-md my-2 mx-auto cursor-pointer
                        border borer-[#543FBF] hover:border-none
                         "
-                        onClick={(e) => { router.push('/member/viewdetailmember'); }}
+                        onClick={(e) => {
+                          router.push('/member/viewdetailmember');
+                        }}
                         data-title="ตรวจสอบ"
                       >
                         <span className="my-auto">
@@ -288,8 +292,8 @@ function Home() {
                         className="bg-[#E6E9F5] text-[#543FBF] hover:bg-[#543FBF]
                        hover:text-[#E6E9F5] flex p-2 rounded-md my-2 mx-auto cursor-pointer
                        border borer-[#543FBF] hover:border-none "
-                        onClick={(e) => { 
-                          router.push('/member/viewdetailmember'); 
+                        onClick={(e) => {
+                          router.push('/member/viewdetailmember');
                         }}
                         data-title="ตรวจสอบ"
                       >
@@ -312,4 +316,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default ListFormMember;

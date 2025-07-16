@@ -32,7 +32,9 @@ function LayoutAfterLogin({ children }) {
                   <div className="flex flex-row gap-4 my-auto">
                     <button
                       className={`text-[#792024] no-underline flex cursor-pointer transition-all duration-200 hover:scale-105`}
-                      onClick={(e) => {}}
+                      onClick={(e) => {
+                        router.push('/requestgazservice/listrequestgazser');
+                      }}
                     >
                       <span className="mx-auto flex">
                         ขอรับสำเนาข้อมูลราชกิจจานุเบกษา

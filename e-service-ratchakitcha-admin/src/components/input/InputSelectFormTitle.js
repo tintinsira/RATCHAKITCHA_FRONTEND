@@ -13,7 +13,7 @@ const InputSelectFormTitle = ({
 }) => {
   return (
     <>
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-2">
         <label htmlFor={`${name}`}>
           {lable}
           {isRequire && (

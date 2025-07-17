@@ -8,10 +8,10 @@ import {
   RiUserSettingsLine,
   RiUserCommunityLine,
 } from 'react-icons/ri'; 
-
-import {
-  AiOutlineFileSearch, 
-} from 'react-icons/ai'; 
+import { HiOutlineDocumentReport } from 'react-icons/hi';
+import { LiaUserCheckSolid } from 'react-icons/lia';
+import { AiOutlineFileSearch } from 'react-icons/ai';
+import { TbFilePencil } from 'react-icons/tb';
 
 function LayoutAfterLogin({ children }) {
   const router = useRouter();
@@ -21,7 +21,7 @@ function LayoutAfterLogin({ children }) {
 
   const menuItems = [
     {
-      icon: AiOutlineFileSearch,
+      icon: LiaUserCheckSolid,
       label: 'ค้นหาแบบฟอร์มระบบสมาชิก',
       path: '/member/listformmember',
     },
@@ -40,11 +40,26 @@ function LayoutAfterLogin({ children }) {
       label: 'ขอบเขตในการเข้าใช้งานระบบของสมาชิก',
       path: '/usageschedule/accessrightsma/listaccessrightsma',
     },
+    {
+      icon: AiOutlineFileSearch,
+      label: 'รายการคำร้องขอรับบริการ',
+      path: '/requestgazservice/listrequestgazser',
+    },
+    {
+      icon: TbFilePencil,
+      label: 'รายการอนุมัติคำร้องขอรับบริการ',
+      path: '/approverrequestgazservice/listrequestgazser',
+    },
+    {
+      icon: HiOutlineDocumentReport,
+      label: 'รายงาน',
+      path: '/report/mainreport',
+    },
   ];
 
   return (
-    <> 
-      <div className="min-h-screen bg-[#ffffff] flex"> 
+    <>
+      <div className="min-h-screen bg-[#ffffff] flex">
         <div
           className={`${
             sidebarOpen ? 'w-[350px]' : 'w-16'
@@ -67,25 +82,30 @@ function LayoutAfterLogin({ children }) {
 
             <nav className="space-y-2">
               {menuItems.map((item, index) => (
-                <button
-                  key={index}
-                  onClick={() => router.push(item.path)}
-                  className={`w-full flex items-center ${
-                    sidebarOpen
-                      ? 'px-4 py-3 justify-start'
-                      : 'p-3 justify-center'
-                  } text-[#792024] hover:bg-[#792024] hover:text-white rounded-lg transition-all duration-200 group`}
-                >
-                  <item.icon size={20} className="flex-shrink-0" />
-                  {sidebarOpen && (
-                    <span className="ml-3 whitespace-nowrap">{item.label}</span>
-                  )}
-                  {!sidebarOpen && (
-                    <div className="absolute left-16 ml-2 px-2 py-1 bg-[#792024] text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-10">
-                      {item.label}
-                    </div>
-                  )}
-                </button>
+                <>
+                  <button
+                    key={index}
+                    onClick={() => router.push(item.path)}
+                    className={`w-full flex items-center ${
+                      sidebarOpen
+                        ? 'px-4 py-3 justify-start'
+                        : 'p-3 justify-center'
+                    } text-[#792024] hover:bg-[#792024] hover:text-white rounded-lg transition-all duration-200 group`}
+                  >
+                    <item.icon size={20} className="flex-shrink-0" />
+                    {sidebarOpen && (
+                      <span className="ml-3 whitespace-nowrap">
+                        {item.label}
+                      </span>
+                    )}
+                    {!sidebarOpen && (
+                      <div className="absolute left-16 ml-2 px-2 py-1 bg-[#792024] text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-10">
+                        {item.label}
+                      </div>
+                    )}
+                  </button>
+                  <hr className="my-1" />
+                </>
               ))}
             </nav>
           </div>

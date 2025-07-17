@@ -34,7 +34,7 @@ function CreateGazServicer() {
     <LayoutAfterLogin>
       <StepCreateGazService numStep={2} />
 
-      <div className="flex gap-4"> 
+      <div className="flex gap-4">
         <div className="my-4 py-8 px-8 shadow-lg rounded-xl border border-[#efece3] flex flex-col w-3/4">
           <span className="text-xl">กรอกคำร้องขอรับบริการ</span>
           <hr className="my-5" />
@@ -92,7 +92,7 @@ function CreateGazServicer() {
                                 ? 'relative border-[#792024] bg-white'
                                 : 'border-[#E2E8F5]'
                             } flex border-2 rounded-lg py-3 px-4 cursor-pointer`}
-                          > 
+                          >
                             {isChecked && (
                               <FaCheckCircle
                                 size={20}
@@ -109,11 +109,11 @@ function CreateGazServicer() {
                                 const already = wantToUseList.some(
                                   (sel) => sel.idx === item.idx
                                 );
-                                if (already) { 
+                                if (already) {
                                   setWantToUseList((prev) =>
                                     prev.filter((sel) => sel.idx !== item.idx)
                                   );
-                                } else { 
+                                } else {
                                   setWantToUseList((prev) => [
                                     ...prev,
                                     { ...item, count: 1 },
@@ -149,14 +149,14 @@ function CreateGazServicer() {
                 <div className="flex items-center space-x-2">
                   <button
                     onClick={() => updateCount(item.idx, -1)}
-                    className="px-2 py-1 bg-gray-200 hover:bg-gray-300 rounded text-gray-700"
+                    className="px-2 py-1 bg-gray-200 hover:bg-gray-300 rounded text-gray-700 cursor-pointer"
                   >
                     –
                   </button>
                   <span className="w-8 text-center">{item.count}</span>
                   <button
                     onClick={() => updateCount(item.idx, 1)}
-                    className="px-2 py-1 bg-blue-500 hover:bg-blue-600 rounded text-white"
+                    className="px-2 py-1 bg-[#792024] hover:bg-[#b96367] rounded text-white cursor-pointer"
                   >
                     +
                   </button>
@@ -192,7 +192,7 @@ function CreateGazServicer() {
             <button
               className="bg-[#ad9e71] text-white hover:bg-[#792024] w-1/2 py-2 rounded-3xl my-4 cursor-pointer"
               onClick={(e) => {
-                 router.push('/requestgazservice/paymentgazservicer');
+                router.push('/requestgazservice/paymentgazservicer');
               }}
             >
               <span className="my-auto">ดำเนินการต่อ</span>

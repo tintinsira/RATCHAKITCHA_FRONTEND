@@ -51,7 +51,7 @@ const StepCreateGazService = ({ numStep = 1 }) => {
             >
               4
             </div>
-            <span>ยืนยันการส่งข้อมูล</span>
+            <span>เสร็จสิ้นรายการ</span>
           </div>
         </div>
       </div>

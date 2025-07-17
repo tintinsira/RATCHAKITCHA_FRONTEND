@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import LayoutAfterLogin from '@/components/layout/layoutafterlogin';
-import InputForm from '@/components/input/InputForm';
 
-import { BsSearch } from 'react-icons/bs';
+import { BsSearch, BsFillPrinterFill } from 'react-icons/bs';
 import { LuFileSearch, LuFileCog } from 'react-icons/lu';
-import { MdFilterList, MdEditDocument, MdOutlinePayment } from 'react-icons/md'; 
-import { PiFileMagnifyingGlassFill } from 'react-icons/pi';
+import { MdFilterList, MdEditDocument, MdOutlinePayment } from 'react-icons/md';
 import { RiDraftFill } from 'react-icons/ri';
-
 
 import InputSelectFormTitle from '@/components/input/InputSelectFormTitle';
 import DatepickerInput from '@/components/input/DatepickerInput';
@@ -18,7 +15,7 @@ function ListRequestGazSer() {
   const router = useRouter();
 
   const [isShowFilter, setIsShowFilter] = useState(false);
-  
+
   return (
     <>
       <LayoutAfterLogin>
@@ -158,9 +155,7 @@ function ListRequestGazSer() {
                   </th>
                   <th className="px-1 py-2 font-normal w-[25%]">
                     <label className="flex justify-start">
-                      <span className="font-semibold mr-2">
-                        วันที่ร้องขอ :{' '}
-                      </span>
+                      <span className="font-semibold mr-2">วันที่ร้องขอ :</span>
                       <p>16/07/2568</p>
                     </label>
                   </th>
@@ -188,7 +183,7 @@ function ListRequestGazSer() {
                        hover:text-[#ECEFF1] flex p-2 rounded-md my-2 cursor-pointer 
                         "
                         onClick={(e) => {
-                         
+                          router.push('/requestgazservice/selectgazservicery');
                         }}
                         data-title="ตรวจสอบคำขอ"
                       >
@@ -237,7 +232,7 @@ function ListRequestGazSer() {
                        hover:text-[#BBDEFB] flex p-2 rounded-md my-2 cursor-pointer 
                         "
                         onClick={(e) => {
-                         
+                          router.push('/requestgazservice/selectgazservicery');
                         }}
                         data-title="ตรวจสอบ"
                       >
@@ -287,7 +282,7 @@ function ListRequestGazSer() {
                         border-none
                         "
                         onClick={(e) => {
-                         
+                          router.push('/requestgazservice/selectgazservicery');
                         }}
                         data-title="ตรวจสอบ"
                       >
@@ -300,7 +295,7 @@ function ListRequestGazSer() {
                        hover:text-[#FFF9C4] flex p-2 rounded-md my-2 cursor-pointer 
                         "
                         onClick={(e) => {
-                         
+                          router.push('/requestgazservice/paymentgazservicer');
                         }}
                         data-title="ชำระเงิน"
                       >
@@ -349,7 +344,7 @@ function ListRequestGazSer() {
                        hover:text-[#6A1B9A] flex p-2 rounded-md my-2 cursor-pointer 
                         "
                         onClick={(e) => {
-                         
+                          router.push('/requestgazservice/selectgazservicery');
                         }}
                         data-title="กำลังดำเนินการ"
                       >
@@ -389,19 +384,34 @@ function ListRequestGazSer() {
                       </label>
                     </label>
                   </th>
-                  <th className="px-1 py-2 rounded-e-xl w-[5%]">
-                    <div className="flex justify-center">
+                  <th className="px-1 py-2 rounded-e-xl w-[5%] ">
+                    <div className="flex justify-center gap-2">
                       <button
                         className="bg-[#80DEEA] text-[#006064] hover:bg-[#c0dedf]
                        hover:text-[#006064] flex p-2 rounded-md my-2 cursor-pointer 
                         "
                         onClick={(e) => {
-                         
+                          router.push('/requestgazservice/selectgazservicery');
                         }}
                         data-title="ตรวจสอบ"
                       >
                         <span className="my-auto">
                           <LuFileSearch size={20} className="my-auto" />
+                        </span>
+                      </button>
+                      <button
+                        className="bg-[#fbfbfb] text-[#0d828c] hover:bg-[#0d828c]
+                       hover:text-[#fbfbfb] flex p-2 rounded-md my-2 cursor-pointer 
+                        "
+                        onClick={(e) => {
+                          router.push(
+                            '/requestgazservice/printdocumentgazservicer?reqDocNo=123'
+                          );
+                        }}
+                        data-title="พิมพ์เอกสาร"
+                      >
+                        <span className="my-auto">
+                          <BsFillPrinterFill size={20} className="my-auto" />
                         </span>
                       </button>
                     </div>

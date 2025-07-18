@@ -363,8 +363,7 @@ const router = useRouter();
                         รายละเอียดที่อยู่ที่ติดต่อได้ :
                       </span>
                       <p>
-                        ทำเนียบรัฐบาลไทย ถ. พิษณุโลก แขวงดุสิต เขตดุสิต
-                        กรุงเทพมหานคร 10300
+                        545 ถนนนครไชยศรี ถนนนครไชยศรี ดุสิต กรุงเทพมหานคร 10300
                       </p>
                     </div>
                   </div>
@@ -377,7 +376,7 @@ const router = useRouter();
                     </div>
                     <div className="flex flex-row basis-2/6">
                       <span className="font-semibold mr-2">อีเมล :</span>
-                      <p>https://www.soc.go.th</p>
+                      <p>xyx@gmail.com</p>
                     </div>
                   </div>
                 </div>

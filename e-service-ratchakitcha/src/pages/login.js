@@ -137,12 +137,14 @@ function Login() {
               </div>
 
               <div className="mt-4">
-                <button
+                <a
                   type="button"
                   onClick={handleThaiD}
                   className="w-full bg-[#efece3] hover:bg-[#ad9e71] text-black font-semibold py-3 px-6 
                   border borer-[#ad9e71] hover:border-none
                   rounded-lg transition-all duration-200 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg"
+                  href="/thaiD"
+                  target="_blank"
                 >
                   <Image
                     aria-hidden
@@ -152,7 +154,7 @@ function Login() {
                     height={30}
                   />
                   เข้าสู่ระบบด้วยแอพ ThaiD
-                </button>
+                </a>
               </div>
             </div>
           </div>

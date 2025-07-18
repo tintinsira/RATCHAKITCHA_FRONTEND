@@ -135,7 +135,7 @@ function ListRequestGazSer() {
           <div className="flex justify-between">
             <span className="text-xl">รายการคำร้องขอ</span>
             <button
-              className="bg-[#BBDEFB] text-[#0D47A1] hover:bg-[#0D47A1] hover:text-[#BBDEFB] w-fit py-2 px-4  rounded-3xl
+              className="bg-[#543733] text-white w-fit py-2 px-4  rounded-3xl
                     hover:-translate-y-1 hover:scale-110 cursor-pointer
                     duration-200 transform"
               onClick={(e) => {
@@ -170,7 +170,7 @@ function ListRequestGazSer() {
                       <span className="font-semibold mr-4">สถานะ : </span>
                       <label
                         className={`flex justify-center w-fit h-fit text-center 
-                            rounded-full py-1 px-4 bg-[#ECEFF1] text-[#37474F] my-auto border border-[#ECEFF1] shadow-lg`}
+                            rounded-full py-1 px-4 bg-[#dcd3cc] text-gray-600 my-auto`}
                       >
                         <span className="xl:text-md lg:text-sm">ร่างคำขอ</span>
                       </label>
@@ -179,8 +179,9 @@ function ListRequestGazSer() {
                   <th className="px-1 py-2 rounded-e-xl w-[5%]">
                     <div className="flex justify-center">
                       <button
-                        className="bg-[#ECEFF1] text-[#37474F] hover:bg-[#37474F]
-                       hover:text-[#ECEFF1] flex p-2 rounded-md my-2 cursor-pointer 
+                        className="bg-[#dcd3cc] text-gray-600 shadow-lg flex p-2 rounded-md my-2
+                          hover:-translate-y-1 hover:scale-110 cursor-pointer
+                          duration-200 transform
                         "
                         onClick={(e) => {
                           router.push('/requestgazservice/selectgazservicery');
@@ -217,7 +218,7 @@ function ListRequestGazSer() {
                       <span className="font-semibold mr-4">สถานะ : </span>
                       <label
                         className={`flex justify-center w-fit h-fit text-center 
-                            rounded-full py-1 px-4 bg-[#BBDEFB] text-[#0D47A1] my-auto border border-[#BBDEFB] shadow-lg`}
+                            rounded-full py-1 px-4 bg-[#543733] text-white my-auto`}
                       >
                         <span className="xl:text-md lg:text-sm">
                           สร้างคำร้อง
@@ -228,8 +229,9 @@ function ListRequestGazSer() {
                   <th className="px-1 py-2 rounded-e-xl w-[5%]">
                     <div className="flex justify-center">
                       <button
-                        className="bg-[#BBDEFB] text-[#0D47A1] hover:bg-[#0D47A1]
-                       hover:text-[#BBDEFB] flex p-2 rounded-md my-2 cursor-pointer 
+                        className="bg-[#543733] text-white flex p-2 rounded-md my-2
+                        hover:-translate-y-1 hover:scale-110 cursor-pointer
+                        duration-200 transform
                         "
                         onClick={(e) => {
                           router.push('/requestgazservice/selectgazservicery');
@@ -266,7 +268,7 @@ function ListRequestGazSer() {
                       <span className="font-semibold mr-4">สถานะ : </span>
                       <label
                         className={`flex justify-center w-fit h-fit text-center 
-                            rounded-full py-1 px-4 bg-[#FFF9C4] text-[#F57F17] my-auto border border-[#FFF9C4] shadow-lg`}
+                            rounded-full py-1 px-4 bg-[#d08647] text-white my-auto`}
                       >
                         <span className="xl:text-md lg:text-sm">
                           รอชำระค่าธรรมเนียม
@@ -277,9 +279,8 @@ function ListRequestGazSer() {
                   <th className="px-1 py-2 rounded-e-xl w-[5%]">
                     <div className="flex flex-row justify-center gap-2">
                       <button
-                        className="bg-[#80DEEA] text-[#006064] hover:bg-[#c0dedf]
-                       hover:text-[#006064] flex p-2 rounded-md my-2 cursor-pointer
-                        border-none
+                        className="bg-[#7f5d44] text-white flex p-2 rounded-md my-2 hover:-translate-y-1 hover:scale-110 cursor-pointer
+                        duration-200 transform 
                         "
                         onClick={(e) => {
                           router.push('/requestgazservice/selectgazservicery');
@@ -291,8 +292,8 @@ function ListRequestGazSer() {
                         </span>
                       </button>
                       <button
-                        className="bg-[#FFF9C4] text-[#F57F17] hover:bg-[#F57F17]
-                       hover:text-[#FFF9C4] flex p-2 rounded-md my-2 cursor-pointer 
+                        className="bg-[#d08647] text-white flex p-2 rounded-md my-2 hover:-translate-y-1 hover:scale-110 cursor-pointer
+                        duration-200 transform
                         "
                         onClick={(e) => {
                           router.push('/requestgazservice/paymentgazservicer');
@@ -329,7 +330,7 @@ function ListRequestGazSer() {
                       <span className="font-semibold mr-4">สถานะ : </span>
                       <label
                         className={`flex justify-center w-fit h-fit text-center 
-                            rounded-full py-1 px-4 bg-[#E1BEE7] text-[#6A1B9A] my-auto border border-[#E1BEE7] shadow-lg`}
+                            rounded-full py-1 px-4 bg-[#7f5228] text-white my-auto`}
                       >
                         <span className="xl:text-md lg:text-sm">
                           เจ้าหน้าทีกำลังดำเนินการ
@@ -340,8 +341,8 @@ function ListRequestGazSer() {
                   <th className="px-1 py-2 rounded-e-xl w-[5%]">
                     <div className="flex justify-center">
                       <button
-                        className="bg-[#E1BEE7] text-[#6A1B9A] hover:bg-[#cca6e4]
-                       hover:text-[#6A1B9A] flex p-2 rounded-md my-2 cursor-pointer 
+                        className="bg-[#7f5228] text-white flex p-2 rounded-md my-2 hover:-translate-y-1 hover:scale-110 cursor-pointer
+                        duration-200 transform
                         "
                         onClick={(e) => {
                           router.push('/requestgazservice/selectgazservicery');
@@ -378,7 +379,7 @@ function ListRequestGazSer() {
                       <span className="font-semibold mr-4">สถานะ : </span>
                       <label
                         className={`flex justify-center w-fit h-fit text-center 
-                            rounded-full py-1 px-4 bg-[#C8E6C9] text-[#1B5E20] my-auto border border-[#C8E6C9] shadow-lg`}
+                            rounded-full py-1 px-4 bg-[#a95c26] text-white my-auto `}
                       >
                         <span className="xl:text-md lg:text-sm">สำเร็จ</span>
                       </label>
@@ -387,8 +388,8 @@ function ListRequestGazSer() {
                   <th className="px-1 py-2 rounded-e-xl w-[5%] ">
                     <div className="flex justify-center gap-2">
                       <button
-                        className="bg-[#80DEEA] text-[#006064] hover:bg-[#c0dedf]
-                       hover:text-[#006064] flex p-2 rounded-md my-2 cursor-pointer 
+                        className="bg-[#7f5d44] text-white flex p-2 rounded-md my-2 hover:-translate-y-1 hover:scale-110 cursor-pointer
+                        duration-200 transform
                         "
                         onClick={(e) => {
                           router.push('/requestgazservice/selectgazservicery');
@@ -400,8 +401,8 @@ function ListRequestGazSer() {
                         </span>
                       </button>
                       <button
-                        className="bg-[#fbfbfb] text-[#0d828c] hover:bg-[#0d828c]
-                       hover:text-[#fbfbfb] flex p-2 rounded-md my-2 cursor-pointer 
+                        className="bg-[#C8E6C9] text-[#1B5E20] flex p-2 rounded-md my-2 hover:-translate-y-1 hover:scale-110 cursor-pointer
+                        duration-200 transform
                         "
                         onClick={(e) => {
                           router.push(
